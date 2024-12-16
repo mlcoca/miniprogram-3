@@ -1,13 +1,35 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/edit/edit"
+    "pages/edit/edit",
+    "pages/category/category",
+    "pages/backup/backup"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "极速笔记",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#07C160",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "笔记",
+        "iconPath": "images/icons/note.png",
+        "selectedIconPath": "images/icons/note-active.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "images/icons/category.png",
+        "selectedIconPath": "images/icons/category-active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
