@@ -1,0 +1,85 @@
+.container {
+  min-height: 100vh;
+  background: #F7F7F7;
+  padding: 20rpx;
+}
+
+.category-list {
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  padding: 0 20rpx;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+
+.category-item:last-child {
+  border-bottom: none;
+}
+
+.category-info {
+  flex: 1;
+}
+
+.category-name {
+  font-size: 32rpx;
+  color: #333333;
+}
+
+.category-count {
+  font-size: 24rpx;
+  color: #999999;
+  margin-left: 20rpx;
+}
+
+.category-actions {
+  display: flex;
+  gap: 20rpx;
+}
+
+.btn {
+  padding: 10rpx 30rpx;
+  border-radius: 6rpx;
+  font-size: 28rpx;
+}
+
+.edit-btn {
+  color: #07C160;
+  background: #E8F7ED;
+}
+
+.delete-btn {
+  color: #FF5151;
+  background: #FFF0F0;
+}
+
+.add-category {
+  margin-top: 40rpx;
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  display: flex;
+  gap: 20rpx;
+}
+
+.category-input {
+  flex: 1;
+  height: 80rpx;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+  background: #F7F7F7;
+  border-radius: 8rpx;
+}
+
+.add-btn {
+  background: #07C160;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 

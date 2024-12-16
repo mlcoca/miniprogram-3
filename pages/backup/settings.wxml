@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="settings-list">
+    <view class="settings-item">
+      <view class="setting-info">
+        <text class="setting-title">自动备份</text>
+        <text class="setting-desc">定期自动备份数据到云端</text>
+      </view>
+      <switch checked="{{autoBackup}}" bindchange="toggleAutoBackup"/>
+    </view>
+    
+    <view class="settings-item" wx:if="{{autoBackup}}">
+      <view class="setting-info">
+        <text class="setting-title">备份频率</text>
+        <text class="setting-desc">选择自动备份的时间间隔</text>
+      </view>
+      <picker bindchange="onIntervalChange" value="{{intervalIndex}}" range="{{intervals}}">
+        <text class="interval-text">{{intervals[intervalIndex]}}</text>
+      </picker>
+    </view>
+    
+    <view class="settings-item">
+      <view class="setting-info">
+        <text class="setting-title">备份加密</text>
+        <text class="setting-desc">使用加密保护备份数据</text>
+      </view>
+      <switch checked="{{useEncryption}}" bindchange="toggleEncryption"/>
+    </view>
+  </view>
+
+  <view class="tips">
+    <text class="tip-text">提示：开启自动备份需要授权云存储权限</text>
+  </view>
+</view> 

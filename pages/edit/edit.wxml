@@ -1,0 +1,55 @@
+<view class="page">
+  <view class="container">
+    <view class="nav-bar">
+      <view class="nav-left">
+        <view class="left-btn" bindtap="onCancel">
+          <image class="nav-icon" src="/images/icons/back.png" binderror="onImageError"></image>
+        </view>
+        <view class="home-btn" bindtap="goToHome">
+          <image class="nav-icon" src="/images/icons/home.png" binderror="onImageError"></image>
+        </view>
+      </view>
+      <view class="title">编辑笔记</view>
+      <view class="right-btn" bindtap="saveNote">
+        <text class="save-text">完成</text>
+      </view>
+    </view>
+
+    <view class="edit-area">
+      <view class="input-container">
+        <input class="title-input" 
+               placeholder="标题" 
+               placeholder-class="placeholder"
+               value="{{title}}" 
+               bindinput="onTitleInput"
+               maxlength="50"/>
+        
+        <textarea class="content-input" 
+                  placeholder="开始输入内容..." 
+                  placeholder-class="placeholder"
+                  value="{{content}}" 
+                  bindinput="onContentInput"
+                  maxlength="1000"
+                  show-confirm-bar="{{false}}"
+                  auto-height/>
+      </view>
+      <view class="bottom-placeholder"></view>
+    </view>
+
+    <view class="floating-buttons">
+      <view class="tool-btn" bindtap="selectCategory">
+        <image class="tool-icon" src="/images/icons/category.png" binderror="onImageError"></image>
+        <view class="tool-badge" wx:if="{{category}}"></view>
+      </view>
+      <view class="tool-btn" bindtap="addImage">
+        <image class="tool-icon" src="/images/icons/image.png" binderror="onImageError"></image>
+      </view>
+      <view class="tool-btn" bindtap="addLink">
+        <image class="tool-icon" src="/images/icons/link.png" binderror="onImageError"></image>
+      </view>
+      <view class="tool-btn" bindtap="deleteNote" wx:if="{{noteId}}">
+        <image class="tool-icon" src="/images/icons/delete.png" binderror="onImageError"></image>
+      </view>
+    </view>
+  </view>
+</view> 

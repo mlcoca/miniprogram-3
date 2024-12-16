@@ -1,0 +1,48 @@
+<view class="container">
+  <view class="backup-card">
+    <view class="card-header">
+      <text class="card-title">本地数据</text>
+      <text class="update-time" wx:if="{{lastBackupTime}}">上次备份: {{lastBackupTime}}</text>
+    </view>
+    <view class="data-info">
+      <view class="info-item">
+        <text class="label">笔记数量</text>
+        <text class="value">{{notesCount}}条</text>
+      </view>
+      <view class="info-item">
+        <text class="label">分类数量</text>
+        <text class="value">{{categoriesCount}}个</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="action-list">
+    <view class="action-item" bindtap="backupToCloud">
+      <view class="action-info">
+        <text class="action-title">备份到云端</text>
+        <text class="action-desc">将数据保存到云端存储</text>
+      </view>
+      <text class="iconfont icon-right"></text>
+    </view>
+
+    <view class="action-item" bindtap="restoreFromCloud">
+      <view class="action-info">
+        <text class="action-title">从云端恢复</text>
+        <text class="action-desc">使用云端数据替换本地数据</text>
+      </view>
+      <text class="iconfont icon-right"></text>
+    </view>
+
+    <view class="action-item" bindtap="exportData">
+      <view class="action-info">
+        <text class="action-title">导出数据</text>
+        <text class="action-desc">导出为文本文件</text>
+      </view>
+      <text class="iconfont icon-right"></text>
+    </view>
+  </view>
+
+  <view class="tips">
+    <text class="tip-text">提示：定期备份数据可以防止数据丢失</text>
+  </view>
+</view> 

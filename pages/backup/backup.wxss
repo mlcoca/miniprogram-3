@@ -1,0 +1,104 @@
+.container {
+  min-height: 100vh;
+  background: #F7F7F7;
+  padding: 20rpx;
+}
+
+.backup-card {
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333333;
+}
+
+.update-time {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.data-info {
+  display: flex;
+  gap: 40rpx;
+}
+
+.info-item {
+  flex: 1;
+  background: #F7F7F7;
+  padding: 20rpx;
+  border-radius: 8rpx;
+}
+
+.label {
+  font-size: 26rpx;
+  color: #666666;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.value {
+  font-size: 36rpx;
+  color: #333333;
+  font-weight: 500;
+}
+
+.action-list {
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  padding: 0 30rpx;
+}
+
+.action-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+
+.action-item:last-child {
+  border-bottom: none;
+}
+
+.action-info {
+  flex: 1;
+}
+
+.action-title {
+  font-size: 30rpx;
+  color: #333333;
+  margin-bottom: 6rpx;
+  display: block;
+}
+
+.action-desc {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.icon-right {
+  color: #CCCCCC;
+  font-size: 32rpx;
+}
+
+.tips {
+  margin-top: 40rpx;
+  padding: 0 20rpx;
+}
+
+.tip-text {
+  font-size: 24rpx;
+  color: #999999;
+} 

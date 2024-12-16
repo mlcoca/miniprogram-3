@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="container">
+    <view class="header">
+      <view class="title-bar">
+        <view class="app-title">极速笔记</view>
+      </view>
+    </view>
+    
+    <scroll-view scroll-y class="content" enable-flex>
+      <view class="quick-tags">
+        <view class="tag-item {{currentTag === 'all' ? 'active' : ''}}" bindtap="switchTag" data-tag="all">全部</view>
+        <view class="tag-item {{currentTag === 'work' ? 'active' : ''}}" bindtap="switchTag" data-tag="work">工作</view>
+        <view class="tag-item {{currentTag === 'life' ? 'active' : ''}}" bindtap="switchTag" data-tag="life">生活</view>
+        <view class="tag-item {{currentTag === 'study' ? 'active' : ''}}" bindtap="switchTag" data-tag="study">学习</view>
+      </view>
+
+      <view class="note-list">
+        <view class="empty-state" wx:if="{{notes.length === 0}}">
+          <text class="empty-text">开始创建你的第一条笔记吧</text>
+        </view>
+        <view class="note-item" wx:for="{{notes}}" wx:key="id">
+          <view class="note-content">
+            <text class="note-title">{{item.title || '无标题'}}</text>
+            <text class="note-brief">{{item.content || '暂无内容'}}</text>
+            <view class="note-info">
+              <text class="note-time">{{item.createTime}}</text>
+              <text class="note-category" wx:if="{{item.category}}">{{item.categoryName}}</text>
+            </view>
+          </view>
+          <view class="note-actions">
+            <view class="action-btn" catchtap="shareNote" data-note="{{item}}">
+              <image class="action-icon" src="/images/icons/share.png"></image>
+            </view>
+            <view class="action-btn" catchtap="copyNote" data-note="{{item}}">
+              <image class="action-icon" src="/images/icons/copy.png"></image>
+            </view>
+            <view class="action-btn" catchtap="editNote" data-id="{{item.id}}">
+              <image class="action-icon" src="/images/icons/edit.png"></image>
+            </view>
+            <view class="action-btn delete" catchtap="deleteNote" data-id="{{item.id}}">
+              <image class="action-icon" src="/images/icons/delete.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="bottom-placeholder"></view>
+    </scroll-view>
+
+    <view class="floating-buttons">
+      <view class="tool-btn" bindtap="createNote">
+        <image class="tool-icon" src="/images/icons/text.png" binderror="onImageError"></image>
+      </view>
+      <view class="tool-btn" bindtap="createImageNote">
+        <image class="tool-icon" src="/images/icons/image.png" binderror="onImageError"></image>
+      </view>
+      <view class="tool-btn" bindtap="createLinkNote">
+        <image class="tool-icon" src="/images/icons/link.png" binderror="onImageError"></image>
+      </view>
+      <view class="tool-btn" bindtap="goToBackup">
+        <image class="tool-icon" src="/images/icons/backup.png" binderror="onImageError"></image>
+      </view>
+    </view>
+  </view>
+</view>

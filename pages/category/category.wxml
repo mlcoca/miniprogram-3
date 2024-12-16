@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="category-list">
+    <view class="category-item" wx:for="{{categories}}" wx:key="id">
+      <view class="category-info">
+        <text class="category-name">{{item.name}}</text>
+        <text class="category-count">{{item.count}}条笔记</text>
+      </view>
+      <view class="category-actions">
+        <text class="btn edit-btn" bindtap="editCategory" data-id="{{item.id}}">编辑</text>
+        <text class="btn delete-btn" bindtap="deleteCategory" data-id="{{item.id}}">删除</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="add-category">
+    <input class="category-input" 
+           placeholder="新建分类" 
+           value="{{newCategory}}"
+           bindinput="onInputChange"/>
+    <view class="btn add-btn" bindtap="addCategory">添加</view>
+  </view>
+</view> 
